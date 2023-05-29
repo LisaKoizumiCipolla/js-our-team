@@ -35,8 +35,8 @@ const teamMembers = [
 
 console.log(teamMembers);
 
-// creation link with html ul
-const teamMembersList = document.getElementsByClassName("ul");
+// add element in html
+const teamMembersList = document.querySelector("team");
 
 // creation variable for li item
 let teamMembersListItem;
@@ -45,7 +45,7 @@ for (let i = 0 ; i < teamMembers.length ; i++){
 
     teamMembersListItem = document.createElement("li");
     teamMembersListItem.append(teamMembers[i]);
-    
+
     console.log(teamMembers[i]);
 
     teamMembersList.appendChild(teamMembersListItem);
