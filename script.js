@@ -33,10 +33,10 @@ const teamMembers = [
     },
 ]
 
-console.log(teamMembers);
-
 // add element in html
-const teamMembersList = document.querySelector("team");
+const teamMembersList = document.getElementById("team");
+
+//console.log(teamMembersList);
 
 // creation variable for li item
 let teamMembersListItem;
@@ -44,9 +44,15 @@ let teamMembersListItem;
 for (let i = 0 ; i < teamMembers.length ; i++){
 
     teamMembersListItem = document.createElement("li");
-    teamMembersListItem.append(teamMembers[i]);
 
-    console.log(teamMembers[i]);
+    for (let key in teamMembers[i]){
+        console.log(teamMembers[i][key]);
+        teamMembersListItem.append(teamMembers[i][key]);
+    }
+
+    //console.log(teamMembers[i]);
 
     teamMembersList.appendChild(teamMembersListItem);
 }
+
+//teamMembersListItem.append(teamMembers[i]["name" , "position" , "img"]); 
